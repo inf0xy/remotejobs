@@ -1,0 +1,24 @@
+import React from 'react';
+
+type HeartIconProps = {
+  width?: number;
+  height?: number;
+  color: 'gray' | 'white';
+};
+
+const HeartIcon: React.FC<HeartIconProps> = ({ color, width, height }) => {
+  return (
+    <img
+      src={
+        color === 'gray'
+          ? 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD2ElEQVR4nO1ZS4hcRRStcVDUMYoBRfxuXIjxC6K4UpFs40LeQvG/aEwndc+5r9LMqNEnLly4i4tAMqILVxLUoCGbrHXhD5Go40LUaBAjaCSGYMxEqdc90F2vpt97/ZmeQB8oaB51T917q+p+qo2ZYooppjgnoKobATyjwH6lLBHytxInlfIDiQ8V4I4dzavKePwcUlQhB7ys52hzyZJS3leVpxe2br18lIpflAIvKPGXEv/1G4T8Q8pea+0VIY9z7kqFLPo5FXiOk/K8X3so5a211yrk87IFIwr8rmrvW+EBcH/+rSaPQj5V1WsGVp6QX2ov2rUbKvKYAk8ocXpQHiV+rm2E37qY5wn5TYGdAO5wzs01Go2LnbU3p0BKyJHI/H/9iHw/oirOy+Yczs2lqb3TcytxLLYTWfbkhZUN6Jz5kGRfq9XasJpMlmUXdOTO9PHmGQWe83P77PylSnm3YDRloar3NxYuLGSfMWamijxpH1rlyJxOgS1VOLIsOy80wl/sStEpD5XBsenn+RhU5VFClrs4lv23Ohzz8/OXhccpBZ4qXzyP893ex04zAEh5Vomzfvjfg3Ao8FKvM/Fe+cKQ73oM0O23D7J4zkVZqHx2I8gvds8xlCVTBiVOdAs1m81LzITQarU2BPfoRKkQgVO9OzBkNhwCzrm5wICTpUJhPBeRW8yEICK3BXfgx1IhhXwQxF9dE20j8MkuCCj7TRl8Vg1ywGEzISjlm8CZKBVyrnlDdwxv3wP7gFljpCIPhlnc12eVhAvHCPgiSZJZs0ZIkmSWwJe1c8AKVPXu4i5I06wRSGuDamCZ5F01SeStwAOnfFQYm9YdkNzU7vR67uGiqQvf+kWKusM+NpsxwTk3R+LrsIjz3dxAhAAeiZTVB8ZxH5Ikmc174kIZbR8fipjAm0Uj8PrINO+AlN1F5fGGGRa+YyLkq4gRr5gRgZRXC8r7KDSqMiZN0+vy3rTYJb04AuWzeMs5YDO/+kLcROKPiBG7qnZrAWZIeS2i/PGxRTsA90bfh4A9dS52nqgoe2PKA7hnLMpXMOKdfs36CvwcP3ciygeZuvhQBTnUr3/OGxTIoYIccax2ph0Wabr9JiV+ioS+z2KJp/3aIR9H5h9V1VvNJNDatu3qeIiV71X1xu4Kt/14WwiV34rI9WaS8J4l8VFEuV/9C16ntimEYCU+iT0CT7B3lYNFJeXP9ih8PzjOmmrwWgayGPF0eObfbjQa55t1ihkFXl5dednlnw3NegdpbdAQnVWgZc4lqMjDvgnK/yeo+S66bpCKbPZj0npMMcUUZv3if8+mmySEprG4AAAAAElFTkSuQmCC'
+          : 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADC0lEQVR4nO2YTWxMURTHXyuEMoRE01BsLEQpEiFWiNiysNIgWDUSoURS1EcsLOxYSKiwsGoEDU031ix8pZGiFoIiohLaVCP19ZObOYuX48zMvfPmq8n8kpdMZu753/97c9+595woqlKlSpUJATAH2At0AwPAd2AMeAPcBQ4CDR46DUAb0COxY6LlNG8De4DZhTQ+DTgOjJCbceAyMNfQqQc6ZUwuhoFjbu6k5huBJ4TzBVgf09kg34XyCJifxPwH8sc96R3ALuBnAp33wTchy8Z68p+BDmAlMB2oA5YCh4BBY/wvuTRu7GGJrROtVaI9lOGfmBpyA27Na24AqSwxUyTud5an6X476sZm0ZkJ3DRi20OyzYhhvsYzfmuGJeO+2+KpUWvcxLBXdpJUqZdNxiefQaMF+BPTcJ9bAjVmGctpt0+gy/NxOkImjum0An/las1T46Tycssn6JUKWpHP5KLV7r12DeTFjjPgEzSqgmZEZQJIKS+jPkE/VFCy3TABpNNrnDGfIJ3Pl5XErQHQrLy89Qm6o4LaojJBerOL0+0T5HbVOP0lcWsAvFBeDvgELVI53LExKjHAJmMXb/QN1svoKTCp6K4FNxfQF7wHxATWGP/CvqhEAPvV3M7L6lCRa0rEpdfmorkWgCap0uJ0RqFI6acPdf0uNweLheX958Yhrj5fwe38T08x3gfS697VxJqdSYWvGqIXCuZcAC4a81yJkiIV0zND/ExicQE4a+j3FewYAyyQ2lRzogDapwzdwbyL+RzZ4asx2Xnfak3p1QDnDL3homU7YF2G/tClkBdbXljXP7LMry2KeY+b6MpWrKviv6ss5tVObTWq7uXoXKRkjGYoeKdNCrAEeGeYeWxtPNLteGCM/wgsL6n5mKl5GVLsa2CxOuG65q3mJbCwLObVk71vmPskHbymDCn4odUELgtyhuk1TH6TS9NbzDNVXkhqdO3zXFwHJkeVCOnN6XQW827Tq40qHdIFSbwgct25I9FEAtgmRdB4aF+0YgA2u6vcPqpUqRJVLv8Ab1VhbSGTL+wAAAAASUVORK5CYII='
+      }
+      width={width ? width : 24}
+      height={height ? height : 24}
+      alt="heart outline icon"
+    />
+  );
+};
+
+export default HeartIcon;

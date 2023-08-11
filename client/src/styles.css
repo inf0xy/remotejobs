@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+a {
+  cursor: pointer;
+}
+
+#root {
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+.navbar li {
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 1.4px;
+  text-decoration-color: transparent;
+  transition: 0.5s;
+
+  -webkit-text-decoration-color: transparent;
+     -moz-text-decoration-color: transparent;
+       -o-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+}
+.navbar li:hover {
+  color: white;
+
+  -webkit-text-decoration-color: white;
+     -moz-text-decoration-color: white;
+       -o-text-decoration-color: white;
+          text-decoration-color: white;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo span {
+  font-family: inherit;
+  color: rgb(0, 255, 255);
+}
+
+.auth-buttons li:last-child {
+  color: rgb(0, 255, 255);
+}
+
+.slogan {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}
+
+.job-list,
+.job-detail {
+  overflow-y: auto;
+}
+
+.job-detail li {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.job-detail a {
+  color: #41aca6;
+}
+
+.save-button:hover .icon {
+  color: white;
+}
+
+.option-item {
+  -webkit-transition: background-color 0.3s ease-in-out;
+     -moz-transition: background-color 0.3s ease-in-out;
+       -o-transition: background-color 0.3s ease-in-out;
+          transition: background-color 0.3s ease-in-out;
+}
+
+.panel-show {
+  display: block;
+  -webkit-animation: 0.3s panel_show ease-in;
+     -moz-animation: 0.3s panel_show ease-in;
+       -o-animation: 0.3s panel_show ease-in;
+          animation: 0.3s panel_show ease-in;
+}
+
+@keyframes panel_show {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,6 @@
+node_modules
+config.ts
+client/dist
+server/dist
+.env
+client/.DS_Store
